@@ -1,5 +1,8 @@
+import 'hammerjs';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { AppMaterialModule } from './module/app-material.module';
 
 import { AppComponent } from './app.component';
 import { WorkProjectComponent } from './component/work-project/work-project.component';
@@ -14,7 +17,8 @@ import { FreeSpaceComponent } from './component/free-space/free-space.component'
     FreeSpaceComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
