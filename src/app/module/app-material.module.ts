@@ -3,6 +3,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MdButtonModule,
          MdCheckboxModule,
          MdIconModule,
+         MdInputModule,
          MdToolbarModule } from '@angular/material';
 
 @NgModule({
@@ -11,6 +12,7 @@ import { MdButtonModule,
     MdButtonModule,
     MdCheckboxModule,
     MdIconModule,
+    MdInputModule,
     MdToolbarModule
   ],
   exports: [
@@ -18,6 +20,7 @@ import { MdButtonModule,
     MdButtonModule,
     MdCheckboxModule,
     MdIconModule,
+    MdInputModule,
     MdToolbarModule
   ]
 })

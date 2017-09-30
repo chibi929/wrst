@@ -2,6 +2,7 @@ import 'hammerjs';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppMaterialModule } from './module/app-material.module';
 
 import { AppComponent } from './app.component';
@@ -18,7 +19,9 @@ import { FreeSpaceComponent } from './component/free-space/free-space.component'
   ],
   imports: [
     BrowserModule,
-    AppMaterialModule
+    AppMaterialModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
