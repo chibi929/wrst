@@ -1,3 +1,3 @@
 export interface IBindable<T> {
-  bind(obj: T): T;
+  bind(obj: any): T;
 }
