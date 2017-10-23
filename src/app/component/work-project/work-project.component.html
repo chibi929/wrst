@@ -1,41 +1,41 @@
-<h1>Work Project</h1>
-<form *ngFor="let work of works; let i = index;" class="work-project-form">
-  <div class="text-right">
-    <button md-icon-button class="delete" [disabled]="works.length === 1" (click)="onDeleteButtonClicked(i)">
-      <md-icon aria-label="close">close</md-icon>
-    </button>
+<div id="root-container" class="text-center">
+  <h1>Work Project</h1>
+  <div id="form-container">
+    <form *ngFor="let work of works; let i = index;" class="work-project-form">
+      <div class="text-right">
+        <button md-raised-button class="delete" [disabled]="works.length === 1" (click)="onDeleteButtonClicked(i)">削除</button>
+      </div>
+      <div>
+        <md-form-field>
+          <input mdInput [(ngModel)]="work.overview" name="overview" placeholder="Overview">
+        </md-form-field>
+      </div>
+      <div>
+        <md-form-field>
+          <input mdInput [(ngModel)]="work.schedule" name="schedule" placeholder="Schedule">
+        </md-form-field>
+      </div>
+      <div>
+        <md-form-field>
+          <input mdInput [(ngModel)]="work.technicalKeywords" name="technicalKeywords" placeholder="Technical keywords(csv)">
+        </md-form-field>
+      </div>
+      <div>
+        <md-form-field>
+          <textarea mdInput [(ngModel)]="work.featurePlan" name="featurePlan" placeholder="Feature plan"></textarea>
+        </md-form-field>
+      </div>
+      <div>
+        <md-form-field>
+          <input mdInput [(ngModel)]="work.customers" name="customers" placeholder="Customers(csv)">
+        </md-form-field>
+      </div>
+      <div>
+        <md-form-field>
+          <textarea mdInput [(ngModel)]="work.workingDetails" name="workingDetails" placeholder="Working details"></textarea>
+        </md-form-field>
+      </div>
+    </form>
   </div>
-  <div>
-    <md-form-field>
-      <input mdInput [(ngModel)]="work.overview" name="overview" placeholder="Overview">
-    </md-form-field>
-  </div>
-  <div>
-    <md-form-field>
-      <input mdInput [(ngModel)]="work.schedule" name="schedule" placeholder="Schedule">
-    </md-form-field>
-  </div>
-  <div>
-    <md-form-field>
-      <input mdInput [(ngModel)]="work.technicalKeywords" name="technicalKeywords" placeholder="Technical keywords(csv)">
-    </md-form-field>
-  </div>
-  <div>
-    <md-form-field>
-      <textarea mdInput [(ngModel)]="work.featurePlan" name="featurePlan" placeholder="Feature plan"></textarea>
-    </md-form-field>
-  </div>
-  <div>
-    <md-form-field>
-      <input mdInput [(ngModel)]="work.customers" name="customers" placeholder="Customers(csv)">
-    </md-form-field>
-  </div>
-  <div>
-    <md-form-field>
-      <textarea mdInput [(ngModel)]="work.workingDetails" name="workingDetails" placeholder="Working details"></textarea>
-    </md-form-field>
-  </div>
-</form>
-<div>
   <button md-raised-button class="add" (click)="onAddedButtonClicked()">追加</button>
 </div>
