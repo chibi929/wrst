@@ -1,6 +1,6 @@
-<div id="root-container" class="text-center">
+<div id="wp-root-container" class="text-center">
   <h1>Work Project</h1>
-  <div id="form-container">
+  <div id="wp-form-container">
     <form *ngFor="let work of works; let i = index;" class="work-project-form">
       <div class="text-right">
         <button md-raised-button class="delete" [disabled]="works.length === 1" (click)="onDeleteButtonClicked(i)">削除</button>
