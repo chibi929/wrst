@@ -2,7 +2,6 @@
   min-width: 384px;
   margin-left: 5%;
   margin-right: 5%;
-  border: 1px solid #0f0;
 }
 
 #form-container {
@@ -13,7 +12,11 @@
 .work-project-form {
   width: 30%;
   min-width: 384px;
+  margin: 10px;
   display: inline-block;
+  border: 1px solid #cccccc;
+  box-shadow: 5px 5px 10px #999999;
+  padding: 10px;
 
   div md-form-field {
     width: 100%;
