@@ -1,6 +1,36 @@
-<h1>Individual Project</h1>
-<h2>Overview</h2>
-<h2>Schedule</h2>
-<h2>Technical keywords</h2>
-<h2>Description</h2>
-<h2>Working details</h2>
+<div id="root-container" class="text-center">
+  <h1>Individual Project</h1>
+  <div id="form-container">
+    <form *ngFor="let individual of individuals; let i = index;" class="individual-project-form">
+      <div class="text-right">
+        <button md-raised-button class="delete" [disabled]="individuals.length === 1" (click)="onDeleteButtonClicked(i)">削除</button>
+      </div>
+      <div>
+        <md-form-field>
+          <input mdInput [(ngModel)]="individual.overview" name="overview" placeholder="Overview">
+        </md-form-field>
+      </div>
+      <div>
+        <md-form-field>
+          <input mdInput [(ngModel)]="individual.schedule" name="schedule" placeholder="Schedule">
+        </md-form-field>
+      </div>
+      <div>
+        <md-form-field>
+          <input mdInput [(ngModel)]="individual.technicalKeywords" name="technicalKeywords" placeholder="Technical keywords(csv)">
+        </md-form-field>
+      </div>
+      <div>
+        <md-form-field>
+          <textarea mdInput [(ngModel)]="individual.featurePlan" name="description" placeholder="Description"></textarea>
+        </md-form-field>
+      </div>
+      <div>
+        <md-form-field>
+          <textarea mdInput [(ngModel)]="individual.workingDetails" name="individualingDetails" placeholder="Working details"></textarea>
+        </md-form-field>
+      </div>
+    </form>
+  </div>
+  <button md-raised-button class="add" (click)="onAddedButtonClicked()">追加</button>
+</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Individual } from '../../entity/individual';
 
 @Component({
   selector: 'individual-project',
@@ -6,10 +7,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./individual-project.component.scss']
 })
 export class IndividualProjectComponent implements OnInit {
+  private readonly individuals: Individual[] = [];
 
-  constructor() { }
+  constructor() {
+    this.addElement();
+  }
 
   ngOnInit() {
   }
 
+  private addElement(): void {
+    this.individuals.push(new Individual())
+  }
+
+  private onDeleteButtonClicked(i: number): void {
+    if (this.individuals.length === 1) {
+      return;
+    }
+    this.individuals.splice(i, 1);
+  }
+
+  private onAddedButtonClicked(): void {
+    this.addElement();
+  }
 }
