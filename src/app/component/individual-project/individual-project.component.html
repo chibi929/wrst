@@ -1,6 +1,6 @@
-<div id="root-container" class="text-center">
+<div id="lp-root-container" class="text-center">
   <h1>Individual Project</h1>
-  <div id="form-container">
+  <div id="lp-form-container">
     <form *ngFor="let individual of individuals; let i = index;" class="individual-project-form">
       <div class="text-right">
         <button md-raised-button class="delete" [disabled]="individuals.length === 1" (click)="onDeleteButtonClicked(i)">削除</button>
