@@ -1,0 +1,8 @@
+<div id="date-root-container" class="text-center">
+  <h1>Date</h1>
+  <md-form-field>
+    <input mdInput [mdDatepicker]="picker" placeholder="Choose a date" [(ngModel)]="choseDate">
+    <md-datepicker-toggle mdSuffix [for]="picker"></md-datepicker-toggle>
+    <md-datepicker #picker></md-datepicker>
+  </md-form-field>
+</div>

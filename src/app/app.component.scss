@@ -3,3 +3,17 @@
   margin-right: 10%;
   border: 1px solid #f00;
 }
+
+.footer {
+  padding: 0 16px;
+  height: 64px;
+
+  p {
+    line-height: 64px;
+  }
+}
+
+.primary {
+  color: rgba(255,255,255,.87);
+  background-color: #3f51b5;
+}
