@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Free  } from '../../entity/free';
+import { ITextilable } from '../../interface/textilable';
 
 @Component({
   selector: 'free-space',
   templateUrl: './free-space.component.html',
   styleUrls: ['./free-space.component.scss']
 })
-export class FreeSpaceComponent implements OnInit {
+export class FreeSpaceComponent implements OnInit, ITextilable {
   private readonly frees: Free[] = [];
 
   constructor() {
@@ -29,5 +30,9 @@ export class FreeSpaceComponent implements OnInit {
 
   private onAddedButtonClicked(): void {
     this.addElement();
+  }
+
+  toTextile(): string {
+    return this.frees.map(f => f.toTextile()).join("\n");
   }
 }

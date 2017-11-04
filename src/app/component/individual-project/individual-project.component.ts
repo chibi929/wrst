@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Individual } from '../../entity/individual';
+import { ITextilable } from '../../interface/textilable';
 
 @Component({
   selector: 'individual-project',
   templateUrl: './individual-project.component.html',
   styleUrls: ['./individual-project.component.scss']
 })
-export class IndividualProjectComponent implements OnInit {
+export class IndividualProjectComponent implements OnInit, ITextilable {
   private readonly individuals: Individual[] = [];
 
   constructor() {
@@ -29,5 +30,9 @@ export class IndividualProjectComponent implements OnInit {
 
   private onAddedButtonClicked(): void {
     this.addElement();
+  }
+
+  toTextile(): string {
+    return this.individuals.map(i => i.toTextile()).join("\n");
   }
 }
