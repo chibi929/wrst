@@ -10,6 +10,7 @@ import { WorkProjectComponent } from './component/work-project/work-project.comp
 import { IndividualProjectComponent } from './component/individual-project/individual-project.component';
 import { FreeSpaceComponent } from './component/free-space/free-space.component';
 import { DateComponent } from './component/date/date.component';
+import { ResultDialogComponent } from './component/result-dialog/result-dialog.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DateComponent } from './component/date/date.component';
     WorkProjectComponent,
     IndividualProjectComponent,
     FreeSpaceComponent,
-    DateComponent
+    DateComponent,
+    ResultDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -25,6 +27,7 @@ import { DateComponent } from './component/date/date.component';
     FormsModule,
     ReactiveFormsModule
   ],
+  entryComponents: [ResultDialogComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
