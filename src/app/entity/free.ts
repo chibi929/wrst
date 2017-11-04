@@ -22,7 +22,7 @@ export class Free implements IFree, IBindable<Free>, ITextilable {
 
   toTextile(): string {
     let textile = "";
-    textile += `|${this.freeWords}|\n`;
+    textile += `|${this.freeWords || ""}|\n`;
     return textile;
   }
 }
