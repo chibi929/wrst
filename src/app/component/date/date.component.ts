@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DateAdapter, NativeDateAdapter } from '@angular/material';
 import { WrstDateAdapter } from '../../adapter/wrst-date-adapter';
 import { ITextilable } from '../../interface/textilable';
+import { DateUtil } from '../../util/date-util';
 
 @Component({
   selector: 'date',
@@ -23,6 +24,7 @@ export class DateComponent implements OnInit, ITextilable {
   }
 
   toTextile(): string {
-    return "Date\n";
+    const dateString = DateUtil.format(this.choseDate, "YYYY-MM-DD");
+    return `h2(#${dateString}). ${dateString}`;
   }
 }
