@@ -34,11 +34,11 @@ export class Individual implements IIndividual, IBindable<Individual>, ITextilab
 
   toTextile(): string {
     let textile = "";
-    textile += `|*概要*|${this.overview}|\n`;
-    textile += `|*日程*|${this.schedule}|\n`;
-    textile += `|*技術キーワード*|${this.technicalKeywords}|\n`;
-    textile += `|*説明*|${this.description}|\n`;
-    textile += `|*作業内容*|${this.workingDetails}|\n`;
+    textile += `|*概要*|${this.overview || ""}|\n`;
+    textile += `|*日程*|${this.schedule || ""}|\n`;
+    textile += `|*技術キーワード*|${this.technicalKeywords || ""}|\n`;
+    textile += `|*説明*|${this.description || ""}|\n`;
+    textile += `|*作業内容*|${this.workingDetails || ""}|\n`;
     return textile;
   }
 }
