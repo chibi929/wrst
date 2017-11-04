@@ -3,7 +3,7 @@
   <div id="wp-form-container">
     <form *ngFor="let work of works; let i = index;" class="work-project-form">
       <div class="text-right">
-        <button md-raised-button class="delete" [disabled]="works.length === 1" (click)="onDeleteButtonClicked(i)">削除</button>
+        <button md-raised-button class="delete" [disabled]="works.length === 1" (click)="onDeleteButtonClicked(i)">Delete</button>
       </div>
       <div>
         <md-form-field>
@@ -37,5 +37,5 @@
       </div>
     </form>
   </div>
-  <button md-raised-button class="add" (click)="onAddedButtonClicked()">追加</button>
+  <button md-raised-button class="add" (click)="onAddedButtonClicked()">Add</button>
 </div>

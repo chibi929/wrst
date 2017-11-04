@@ -3,7 +3,7 @@
   <div id="fs-form-container">
     <form *ngFor="let free of frees; let i = index;" class="free-space-form">
       <div class="text-right">
-        <button md-raised-button class="delete" [disabled]="frees.length === 1" (click)="onDeleteButtonClicked(i)">削除</button>
+        <button md-raised-button class="delete" [disabled]="frees.length === 1" (click)="onDeleteButtonClicked(i)">Delete</button>
       </div>
       <div>
         <md-form-field>
@@ -12,5 +12,5 @@
       </div>
     </form>
   </div>
-  <button md-raised-button class="add" (click)="onAddedButtonClicked()">追加</button>
+  <button md-raised-button class="add" (click)="onAddedButtonClicked()">Add</button>
 </div>

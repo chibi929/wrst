@@ -3,7 +3,7 @@
   <div id="lp-form-container">
     <form *ngFor="let individual of individuals; let i = index;" class="individual-project-form">
       <div class="text-right">
-        <button md-raised-button class="delete" [disabled]="individuals.length === 1" (click)="onDeleteButtonClicked(i)">削除</button>
+        <button md-raised-button class="delete" [disabled]="individuals.length === 1" (click)="onDeleteButtonClicked(i)">Delete</button>
       </div>
       <div>
         <md-form-field>
@@ -32,5 +32,5 @@
       </div>
     </form>
   </div>
-  <button md-raised-button class="add" (click)="onAddedButtonClicked()">追加</button>
+  <button md-raised-button class="add" (click)="onAddedButtonClicked()">Add</button>
 </div>

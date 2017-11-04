@@ -7,7 +7,7 @@ import { DateUtil } from '../../util/date-util';
 @Component({
   selector: 'date',
   templateUrl: './date.component.html',
-  styleUrls: ['./date.component.css'],
+  styleUrls: ['./date.component.scss'],
   providers: [
     {provide: DateAdapter, useClass: WrstDateAdapter}
   ]
