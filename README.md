@@ -11,6 +11,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ```bash
 $ git clone git@github.com:chibi929/wrst.git
+$ cd wrst
 $ npm install
 $ npm run start
 ```
