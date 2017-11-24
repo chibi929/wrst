@@ -13,3 +13,26 @@ html, body {
 .text-right {
   text-align: right;
 }
+
+button {
+  &.add {
+    margin-top: 10px;
+    color: #ffffff;
+    background-color: #5cb85c;
+
+    &:hover {
+      background-color: #449d44;
+    }
+  }
+  &.delete {
+    color: #ffffff;
+    background-color: #d9534f;
+
+    &:hover {
+      background-color: #c9302c;
+      &[disabled] {
+        background-color: rgba(0, 0, 0, .12);
+      }
+    }
+  }
+}
